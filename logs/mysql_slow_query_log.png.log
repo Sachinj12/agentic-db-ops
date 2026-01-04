@@ -1,0 +1,24 @@
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.42 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2026-01-04T15:01:13.157658Z
+# User@Host: root[root] @ localhost [::1]  Id:    10
+# Query_time: 0.040684  Lock_time: 0.000017 Rows_sent: 1000  Rows_examined: 52000
+use ecommerce_db;
+SET timestamp=1767538873;
+SELECT *
+FROM orders
+JOIN users ON orders.user_id = users.user_id
+ORDER BY orders.amount
+LIMIT 0, 1000;
+# Time: 2026-01-04T15:01:13.167934Z
+# User@Host: root[root] @ localhost [::1]  Id:     9
+# Query_time: 0.000171  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 0
+use libraryhub;
+SET timestamp=1767538873;
+SELECT st.* FROM performance_schema.events_stages_history_long st WHERE st.nesting_event_id = 165;
+# Time: 2026-01-04T15:01:13.168567Z
+# User@Host: root[root] @ localhost [::1]  Id:     9
+# Query_time: 0.000214  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1767538873;
+SELECT st.* FROM performance_schema.events_waits_history_long st WHERE st.nesting_event_id = 165;

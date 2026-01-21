@@ -30,6 +30,7 @@ This repository represents the *foundation stage*.
 Future steps will include structured parsing and automated analysis.
 
 ## Phase 2 – Runtime Execution Analysis
+
 - Used EXPLAIN ANALYZE to inspect actual execution behavior
 - Query performs a Nested Loop Join
 - ORDER BY on orders.amount causes a full sort before LIMIT

@@ -53,3 +53,19 @@ rows returned, the agent flags it as HIGH_RISK.
 Rationale:
 High rows examined indicates poor access patterns and scalability risk,
 even if execution time is currently acceptable.
+
+## Agent Decision (Phase 2 – Rule-based Agent)
+
+A lightweight decision agent was implemented to classify query risk
+based on execution behavior observed in MySQL.
+
+### Input Evidence
+- rows_examined: 50370
+- rows_returned: 1000
+
+### Agent Rule
+If rows_examined > rows_returned × 10 → HIGH_RISK
+
+### Agent Output
+Agent Decision: HIGH_RISK  
+Evidence: rows_examined = 50370, rows_returned = 1000

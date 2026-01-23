@@ -41,6 +41,15 @@ Future steps will include structured parsing and automated analysis.
 
 Goal:
 Build an agent that autonomously classifies MySQL queries into
-HIGH_RISK, MEDIUM_RISK, or SAFE based on execution behavior and rows examined.
-
+HIGH_RISK, MEDIUM_RISK, or SAFE based on execution behavior and rows examined
 The agent focuses on early risk detection rather than runtime latency alone.
+
+### Initial Agent Rule
+
+Rule 1:
+If a query examines a significantly high number of rows compared to
+rows returned, the agent flags it as HIGH_RISK.
+
+Rationale:
+High rows examined indicates poor access patterns and scalability risk,
+even if execution time is currently acceptable.

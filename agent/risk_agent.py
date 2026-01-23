@@ -27,4 +27,8 @@ def explain_risk(rows_examined, rows_returned):
     return "Query access pattern looks efficient."
 
 print("Explanation:", explain_risk(rows_examined, rows_returned))
+<<<<<<< HEAD
 print("Suggested Fix: Consider adding indexes or optimizing ORDER BY usage.")
+=======
+print("Suggested Fix: Consider adding indexes or optimizing ORDER BY usage.")
+>>>>>>> 06e6d10 (Enhance risk agent with explanation and add evidence screenshot)

@@ -69,3 +69,5 @@ If rows_examined > rows_returned × 10 → HIGH_RISK
 ### Agent Output
 Agent Decision: HIGH_RISK  
 Evidence: rows_examined = 50370, rows_returned = 1000
+
+Agent successfully executed and classified the query as HIGH_RISK based on real MySQL execution evidence.

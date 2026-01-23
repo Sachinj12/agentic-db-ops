@@ -70,4 +70,13 @@ If rows_examined > rows_returned × 10 → HIGH_RISK
 Agent Decision: HIGH_RISK  
 Evidence: rows_examined = 50370, rows_returned = 1000
 
-Agent successfully executed and classified the query as HIGH_RISK based on real MySQL execution evidence.
+Reasoning:
+High scan-to-return ratio indicates inefficient query access pattern,
+even though runtime latency is acceptable.
+
+Agent Explanation:
+The query is likely to become a scalability bottleneck as data grows.
+
+Suggested Fix:
+- Add proper indexes
+- Optimize ORDER BY usage

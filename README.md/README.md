@@ -36,3 +36,11 @@ Future steps will include structured parsing and automated analysis.
 - ORDER BY on orders.amount causes a full sort before LIMIT
 - ~50,000 rows examined to return 1,000 rows
 - Execution time is acceptable now, but pattern is not scalable
+
+ ## Phase 3 – Agentic DB Risk Decision (In Progress)
+
+Goal:
+Build an agent that autonomously classifies MySQL queries into
+HIGH_RISK, MEDIUM_RISK, or SAFE based on execution behavior and rows examined.
+
+The agent focuses on early risk detection rather than runtime latency alone.

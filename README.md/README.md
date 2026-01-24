@@ -85,9 +85,11 @@ File:
 
 ### *Sample Parsed Output*
 
-query_time: 0.04
-rows_examined: 50370
-query:
+Query_time: 0.04
+
+Rows_examined: 50370
+
+Query:
 SELECT * FROM orders
 JOIN users ON orders.user_id = users.user_id
 ORDER BY orders.amount

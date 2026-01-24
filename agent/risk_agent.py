@@ -1,4 +1,7 @@
 def classify_query_risk(rows_examined, rows_returned):
+    """
+    Classify query risk based on rows examined vs rows returned
+    """
     if rows_examined > rows_returned * 10:
         return "HIGH_RISK"
     elif rows_examined > rows_returned * 3:
@@ -7,28 +10,20 @@ def classify_query_risk(rows_examined, rows_returned):
         return "SAFE"
 
 
-# Example input based on our slow query
-rows_examined = 50370
-rows_returned = 1000
-
-decision = classify_query_risk(rows_examined, rows_returned)
-
-print("Agent Decision:", decision)
-print("Evidence: rows_examined =", rows_examined,
-      ", rows_returned =", rows_returned)
-
 def explain_risk(rows_examined, rows_returned):
+    """
+    Explain why the query was classified with a certain risk
+    """
     if rows_examined > rows_returned * 10:
         return (
             "The query scans significantly more rows than it returns. "
             "This indicates inefficient access patterns and potential "
             "performance degradation as data grows."
         )
-    return "Query access pattern looks efficient."
-
-print("Explanation:", explain_risk(rows_examined, rows_returned))
-<<<<<<< HEAD
-print("Suggested Fix: Consider adding indexes or optimizing ORDER BY usage.")
-=======
-print("Suggested Fix: Consider adding indexes or optimizing ORDER BY usage.")
->>>>>>> 06e6d10 (Enhance risk agent with explanation and add evidence screenshot)
+    elif rows_examined > rows_returned * 3:
+        return (
+            "The query scans more rows than it returns. "
+            "This may cause performance issues at scale."
+        )
+    else:
+        return "Query access pattern looks efficient."

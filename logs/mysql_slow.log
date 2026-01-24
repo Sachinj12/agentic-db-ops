@@ -1,0 +1,9 @@
+# Time: 2024-06-12T10:21:33.123456Z
+# User@Host: root[root] @ localhost []
+# Query_time: 0.04  Lock_time: 0.00  Rows_sent: 1000  Rows_examined: 50370
+SET timestamp=1718187693;
+SELECT *
+FROM orders
+JOIN users ON orders.user_id = users.user_id
+ORDER BY orders.amount
+LIMIT 0, 1000;

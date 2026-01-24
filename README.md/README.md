@@ -29,7 +29,7 @@ This project focuses on identifying such risks early.
 This repository represents the *foundation stage*.
 Future steps will include structured parsing and automated analysis.
 
-## Phase 2 – Runtime Execution Analysis
+## Phase 1 – Runtime Execution Analysis
 
 - Used EXPLAIN ANALYZE to inspect actual execution behavior
 - Query performs a Nested Loop Join
@@ -37,7 +37,7 @@ Future steps will include structured parsing and automated analysis.
 - ~50,000 rows examined to return 1,000 rows
 - Execution time is acceptable now, but pattern is not scalable
 
- ## Phase 3 – Agentic DB Risk Decision (In Progress)
+ ## Phase 2 – Agentic DB Risk Decision
 
 Goal:
 Build an agent that autonomously classifies MySQL queries into

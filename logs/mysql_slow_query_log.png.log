@@ -11,6 +11,7 @@ FROM orders
 JOIN users ON orders.user_id = users.user_id
 ORDER BY orders.amount
 LIMIT 0, 1000;
+
 # Time: 2026-01-04T15:01:13.167934Z
 # User@Host: root[root] @ localhost [::1]  Id:     9
 # Query_time: 0.000171  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 0

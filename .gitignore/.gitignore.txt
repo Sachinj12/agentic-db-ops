@@ -1,4 +1,30 @@
-__pycache__/
+# =========================
+# Python
+# =========================
+_pycache_/
 *.pyc
-.env
+*.pyo
+*.pyd
+
+# =========================
+# Virtual Environments
+# =========================
+venv/
+.env/
+
+# =========================
+# OS / Editor files
+# =========================
 .DS_Store
+Thumbs.db
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Logs (keep screenshots, ignore runtime logs if needed later)
+# =========================
+*.log
